@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+  min-height: 500vh;
+}
 .header {
   min-height: 100vh;
   width: 100%;
@@ -58,16 +62,15 @@ nav {
 .nav-links li a:hover::after {
   width: 100%;
 }
-.menu-bar{
-
-    margin: auto;
-    display: none;
+.menu-bar {
+  margin: auto;
+  display: none;
 }
-.line{
-    width: 20px;
-    height: 2px;
-    background-color: white;
-    margin-bottom: 5px;
+.line {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
 }
 .text-box {
   font-family: "Poppins", sans-serif;
@@ -126,51 +129,141 @@ nav {
   font-size: 45px;
 }
 
-@media(max-width:900px){
-    .nav-links{
-        width: 40%;
-    }
+.course {
+  text-align: center;
+  width: 90%;
+  margin: auto auto;
+  margin-top: 100px;
+  /* background-image: url(./images/eduford_img/background.jpg); */
+  background-position: center;
+  background-size: cover;
 }
-@media(max-width:650px){
-    .nav-links{
-        width: 50%;
-    }
+.sec-title {
+  color: rgb(18, 184, 129);
+  font-size: 45px;
+  text-shadow: 0px 2px 2px rgba(54, 54, 54, 0.95);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  /* border: 1px solid red; */
+  display: inline-block;
+  margin-bottom: 10px;
 }
-@media(max-width:550px){
-    .logo {
-        width: 120px;
-        position: fixed;
-        left: 1rem;
-        top: 10px;
-      }
-      .menu-bar{
-          position: absolute;
-          top: 15px;
-          right: 24px;
-          display: block;
-          z-index: 2;
-          transition: 0.5s;
-      }
-    .nav-links{
-        right: 0;
-        flex-direction: column;
-        align-items: center;
-        width: 40%;
-        height: 90vh;
-        transform: translateX(100%);
-        background-color: rgb(30, 20, 94);
-        z-index: 1;
-        transition: 0.5s;
-    }
-    .menubartoggle{
-        transform: translateX(-650%);
-    }
-    .active{
-        transform: translateX(0%);
-    }
+.sec-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  margin: auto;
+  bottom: 8px;
+  transition: 0.5s;
 }
-@media(max-width:400px){
-    .nav-links{
-        width: 50%;
-    }
+.sec-title:hover::after {
+  width: 100%;
+}
+.sec-abt {
+  font-weight: 400;
+  color: rgba(128, 128, 128, 0.877);
+  font-family: cursive;
+}
+.row-c {
+  margin-top: 50px;
+  display: flex;
+  padding: 10px 20px 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.col-c {
+  width: 30%;
+  padding: 5px 10px 5px;
+  min-height: 45vh;
+  background-color: #ebe4d0;
+  transition: all 0.3s;
+  
+}
+.col-c:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.col-c h1 {
+  font-family: "Poppins", sans-serif;
+  text-shadow: 0px 2px 2px rgba(54, 54, 54, 0.756);
+  margin-bottom: 8vh;
+  color: rgb(23, 15, 60);
+}
+.col-c p {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: rgb(19, 17, 17);
+  font-weight: 700;
+}
+
+/* responsive design................... */
+
+@media (max-width: 900px) {
+  .nav-links {
+    width: 40%;
+  }
+  .col-c h1 {
+    margin-bottom: 6vh;
+  }
+}
+@media (max-width: 700px) {
+  .row-c{
+    flex-direction: column;
+  }
+  .col-c{
+    width: 100%;
+    margin-bottom:20px;
+    padding: 20px;
+    min-height: 35vh;
+  }
+}
+@media (max-width: 650px) {
+  .nav-links {
+    width: 50%;
+  }
+}
+@media (max-width: 550px) {
+  .logo {
+    width: 120px;
+    position: fixed;
+    left: 1rem;
+    top: 10px;
+  }
+  .menu-bar {
+    position: absolute;
+    top: 15px;
+    right: 24px;
+    display: block;
+    z-index: 2;
+    transition: 0.5s;
+  }
+  .nav-links {
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 90vh;
+    transform: translateX(100%);
+    background-color: rgb(30, 20, 94);
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .menubartoggle {
+    transform: translateX(-650%);
+  }
+  .active {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 400px) {
+  .nav-links {
+    width: 50%;
+  }
+  .nav-links li a {
+    font-size: 18px;
+  }
 }
