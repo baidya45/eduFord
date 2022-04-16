@@ -3,10 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   min-height: 500vh;
+  max-width: 100vw;
 }
 .header {
   min-height: 100vh;
@@ -23,8 +25,8 @@ nav {
   align-items: center;
   line-height: 8vh;
 }
-#nava {
-}
+/* #nava {
+} */
 .logo {
   width: 160px;
   position: relative;
@@ -180,9 +182,8 @@ nav {
   min-height: 45vh;
   background-color: #ebe4d0;
   transition: all 0.3s;
-  
 }
-.col-c:hover{
+.col-c:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -203,30 +204,32 @@ nav {
 /* responsive design................... */
 
 @media (max-width: 900px) {
-  .nav-links {
-    width: 40%;
-  }
+  /* .nav-links {
+    width: 100%;
+    height: 100%;
+  } */
   .col-c h1 {
     margin-bottom: 6vh;
   }
 }
 @media (max-width: 700px) {
-  .row-c{
+  .row-c {
     flex-direction: column;
   }
-  .col-c{
+  .col-c {
     width: 100%;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     padding: 20px;
     min-height: 35vh;
   }
 }
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
   .nav-links {
     width: 50%;
   }
-}
+} */
 @media (max-width: 550px) {
+ 
   .logo {
     width: 120px;
     position: fixed;
@@ -238,31 +241,36 @@ nav {
     top: 15px;
     right: 24px;
     display: block;
-    z-index: 2;
+    z-index: 100;
     transition: 0.5s;
   }
   .nav-links {
+    position: fixed;
+    top: 0;
     right: 0;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-    height: 90vh;
+    width: 100%;
+    height: 100vh;
     transform: translateX(100%);
     background-color: rgb(30, 20, 94);
     z-index: 1;
     transition: 0.5s;
   }
-  .menubartoggle {
+  /* .menubartoggle {
     transform: translateX(-650%);
-  }
+  } */
   .active {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
     transform: translateX(0%);
   }
 }
 @media (max-width: 400px) {
-  .nav-links {
+  /* .nav-links {
     width: 50%;
-  }
+  } */
   .nav-links li a {
     font-size: 18px;
   }
