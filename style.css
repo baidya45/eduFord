@@ -181,6 +181,7 @@ nav {
   padding: 10px 20px 10px;
   justify-content: space-around;
   align-items: center;
+  
 }
 .col-c {
   width: 30%;
@@ -212,6 +213,35 @@ nav {
   margin: auto;
   text-align: center;
   padding-top: 2.6rem;
+  
+}
+.campus-col{
+  flex-basis: 32%;
+  overflow: hidden;
+  position: relative;
+}
+.campus-col img{
+  width: 100%;
+
+}
+.layer{
+  
+  position: absolute;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  transition: all 0.5s;
+}
+.layer:hover{
+  background-color: rgba(77, 35, 35, 0.363);
+
+}
+.layer h2{
+  margin: auto;
+  text-transform: capitalize;
 }
 
 /* responsive design................... */
@@ -230,6 +260,9 @@ nav {
     margin-bottom: 20px;
     padding: 20px;
     min-height: 35vh;
+  }
+  .campus-col img{
+    height: 350px;
   }
 }
 
