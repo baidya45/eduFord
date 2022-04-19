@@ -175,7 +175,7 @@ nav {
   color: rgba(128, 128, 128, 0.877);
   font-family: cursive;
 }
-.row-c {
+.row {
   margin-top: 50px;
   display: flex;
   padding: 10px 20px 10px;
@@ -207,6 +207,13 @@ nav {
   font-weight: 700;
 }
 
+.campus{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 2.6rem;
+}
+
 /* responsive design................... */
 
 @media (max-width: 900px) {
@@ -215,7 +222,7 @@ nav {
   }
 }
 @media (max-width: 700px) {
-  .row-c {
+  .row {
     flex-direction: column;
   }
   .col-c {
@@ -226,7 +233,7 @@ nav {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 850px) {
   nav{
     position: fixed;
     width: 100%;
